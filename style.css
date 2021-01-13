@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+/*-----------menu-----------*/
+
+.menu-main {
+  list-style: none;
+  margin: 0px 0 10px;
+  padding: 25px 0 10px;
+  text-align: center;
+  background-color:white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;} 
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 10px;
+  margin: 0 30px 0 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #696969;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #696969;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+@media (max-width: 550px) {
+.menu-main {padding-top: 0;}
+.menu-main li {display: block;}
+.menu-main li:after {content: none;}
+.menu-main a {
+  padding: 25px 0 20px; 
+  margin: 0 30px;
+}
+}
+/*--------------------------*/
+
+/*слайдер для галлереи*/
+.slider {
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.slider .slides {
+	overflow: hidden;
+	width: 100%;
+	height: 70vmin;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.slider .slides > li {
+	width: 100%;
+	height: 70vmin;
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+}
+.slider .slides > li > img {
+	width: 100%;
+	height: auto;
+}
+.slider .thumbnails {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.slider .thumbnails > li {
+	float: left;
+	width: 20%;
+}
+.slider .thumbnails > li > a {
+	display: block;
+}
+.slider .thumbnails > li > a > img {
+	width: 100%;
+	height: auto;
+}
+
+.slider .slides li:target {
+	z-index: 3;
+	/*-webkit-animation: slide 1s 1;*/
+}
+/*.slider .slides li:not(:target) {
+	-webkit-animation: hidden 1s 1;
+}*/
+
+/*--------------------------------*/
+
+.p{
+	font-family: 'Ubuntu Condensed', sans-serif;
+	letter-spacing: 1px;
+	font-size: 20px;
+	text-align: justify;
+	color: #696969;
+}
+
+.container {	
+	background-color: white;
+	width: 100%;
+	max-width: 1024px;
+	height:auto;
+	margin: 0 auto;
+}
+
+.footer{
+	position: absolute;
+	left: 50%;
+	bottom: 10px;
+	font-family: 'Ubuntu Condensed', sans-serif;
+	letter-spacing: 1px;
+	color:#808080;
+}
+
+.picture{
+	display: block;
+	margin: 0 auto;
+}
